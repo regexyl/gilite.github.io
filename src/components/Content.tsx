@@ -28,7 +28,7 @@ const Content = () => {
           <li>
             <a href="https://obsidian.md/">Obsidian</a> - for note-taking in
             markdown (synced to{' '}
-            <a href="https://github.com/gilite/notes">this repo</a>)
+            <a href="https://github.com/gilite-notes/notes">this repo</a>)
           </li>
           <li>
             <a href="https://gist.github.com/">GitHub Gists</a> - for things I
