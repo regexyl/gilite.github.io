@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Outfit:wght@400;700&display=swap');
+
+:root {
+  color-scheme: light dark;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  --link-color: #0d7ad4;
+  --bg-color: #f0f0f0;
+  --heading-color: #000000;
+  --content-color: #3f3f3f;
+  
+  font-family: 'JetBrains Mono', monospace;
+  margin: 2em 25em;
+  background-color: var(--bg-color);
+  color: var(--content-color);
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body.dark-mode {
+  --link-color: #58adf4;
+  --bg-color: #313131;
+  --heading-color: #e9b423;
+  --content-color: #ffffff;
+
+  background-color: var(--bg-color);
+  color: var(--content-color);
+}
+
+h4 {
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-top: 2.4em;
+}
+
+.menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-nav {
+  padding-top: 1em;
+}
+
+.header-nav > a {
+  margin-left: 0.6em;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 0.15em solid var(--link-color);
+}
+
+.content {
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 2em 13em;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 784px) {
+  body {
+    margin: 2em 6em;
   }
+}
+
+@media (max-width: 554px) {
+  body {
+    margin: 3em 5em;
+  }
+
+  .header {
+    display: block;
+    margin-top: -1.2em;
+  }
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  .header-nav {
+    padding-top: 0;
+  }
+
+  .header-nav > a {
+    margin-left: 0em;
+    margin-right: 0.6em;
+  }
+}
+
+/* Toggle */
+.darkModeToggle {
+  position: absolute;
+  right: 0;
 }
